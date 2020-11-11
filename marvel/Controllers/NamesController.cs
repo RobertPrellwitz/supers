@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace marvel.Controllers
 {
-    public class NamesControl : Controller
+    public class NamesController : Controller
     {
         // GET: NamesControl
         private ApplicationDbContext dbContext;
 
-        public NamesControl(ApplicationDbContext context)
+        public NamesController(ApplicationDbContext context)
         {
             dbContext = context;
         }
