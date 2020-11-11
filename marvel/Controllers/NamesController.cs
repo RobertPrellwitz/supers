@@ -18,14 +18,18 @@ namespace marvel.Controllers
         {
             dbContext = context;
         }
-        public ActionResult Index()
+        public ActionResult Index(HerosList heros)
         {
+
+           //dbContext.heros.Select();
             return View();
         }
 
         // GET: NamesControl/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int Id)
         {
+            dbContext.heros.Find(Id);
+
             return View();
         }
 
