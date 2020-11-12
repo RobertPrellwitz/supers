@@ -108,5 +108,13 @@ namespace marvel.Controllers
                 return View();
             }
         }
+
+        public ActionResult SuperHeros()
+        {
+            var superheroes = dbContext.heros.Select(h => h);
+
+            //var heroes = dbContext.heros.ToList();
+            return View(superheroes);
+        }
     }
 }

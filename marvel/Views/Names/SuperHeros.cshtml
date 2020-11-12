@@ -18,7 +18,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.AlterEgo)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.SuperPower)
             </th>
             <th>
@@ -26,7 +26,7 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.CatchPhrase)
-            </th>
+            </th>*@
             <th></th>
         </tr>
     </thead>
@@ -39,7 +39,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.AlterEgo)
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.SuperPower)
             </td>
             <td>
@@ -47,7 +47,7 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CatchPhrase)
-            </td>
+            </td>*@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |

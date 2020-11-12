@@ -1,8 +1,8 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 .body-index {
-    background-image: url('Marvel universe.jpg');
-    background-size: cover;
+    background-image: url('../Img/Marvel universe.jpg');
+    background-size:auto;
 }
 a.navbar-brand {
   white-space: normal;
@@ -10,6 +10,11 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+.rob-txt{
+    color:antiquewhite;
+    
+   
+}
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
