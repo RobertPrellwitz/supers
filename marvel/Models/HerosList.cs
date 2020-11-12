@@ -16,7 +16,7 @@ namespace marvel.Models
         public string SuperPower { get; set; }
         public string SuperPowerII { get; set; }
         public string CatchPhrase { get; set; }
-       // public object picutre { get; set; }
+        public string picutre { get; set; }
 
     }
 }
