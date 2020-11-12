@@ -87,16 +87,20 @@ namespace marvel.Controllers
         // GET: NamesControl/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var returnHero = dbContext.heros.Find(id);
+            return View(returnHero);
+            
         }
 
         // POST: NamesControl/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, HerosList hero)
         {
             try
             {
+                dbContext.heros.Remove(hero);
+                dbContext.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             catch
