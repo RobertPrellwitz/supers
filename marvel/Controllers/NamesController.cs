@@ -18,11 +18,12 @@ namespace marvel.Controllers
         {
             dbContext = context;
         }
-        public ActionResult Index(HerosList heros)
+        public ActionResult Index()
         {
+            var superheroes = dbContext.heros.Select(h => h);
 
-           //dbContext.heros.Select();
-            return View();
+            //var heroes = dbContext.heros.ToList();
+            return View(superheroes);
         }
 
         // GET: NamesControl/Details/5
@@ -42,13 +43,14 @@ namespace marvel.Controllers
         // POST: NamesControl/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(HerosList heros)
+        public ActionResult Create(HerosList hero)
         {
             try
             {
-                dbContext.heros.Add(heros);
+                dbContext.heros.Add(hero);
                 dbContext.SaveChanges();
 
+                //return RedirectToAction("Index", "Home");
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -60,16 +62,20 @@ namespace marvel.Controllers
         // GET: NamesControl/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var returnHero = dbContext.heros.Find(id);
+            return View(returnHero);
         }
 
         // POST: NamesControl/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, HerosList hero)
         {
             try
             {
+                dbContext.heros.Update(hero);
+                dbContext.SaveChanges();
+                
                 return RedirectToAction(nameof(Index));
             }
             catch
