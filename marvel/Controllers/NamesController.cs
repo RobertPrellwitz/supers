@@ -29,9 +29,9 @@ namespace marvel.Controllers
         // GET: NamesControl/Details/5
         public ActionResult Details(int Id)
         {
-            dbContext.heros.Find(Id);
+            var look = dbContext.heros.Find(Id);
 
-            return View();
+            return View(look);
         }
 
         // GET: NamesControl/Create
