@@ -15,9 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\Img\black panther.jpg" />
-    <None Include="wwwroot\Img\captain america.jpg" />
-    <None Include="wwwroot\Img\Iron Man.jpg" />
     <None Include="wwwroot\Img\Marvel universe.jpg" />
   </ItemGroup>
 
